@@ -28,9 +28,14 @@ namespace Variables
             string myFirstName;
             myFirstName = Console.ReadLine();
 
-            string myLastName;            
+            //string myLastName;            
+            //Console.Write("Type your last name: ");
+            //myLastName = Console.ReadLine();
+
+            //simplify the above lines of code
             Console.Write("Type your last name: ");
-            myLastName = Console.ReadLine();
+            string myLastName = Console.ReadLine();
+            
 
             Console.WriteLine("Hello!! " + myFirstName + " " + myLastName);
             Console.ReadLine();
