@@ -10,35 +10,42 @@ namespace Decisions
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Anu's big giveaway");
             Console.WriteLine("Choose a door: 1, 2 or 3");
             string userValue = Console.ReadLine();
 
             string message;
 
-            if (userValue == "1")
-            {
-                message = "You won a car!";
-                //Console.WriteLine(message);
-
-            }
-            else if (userValue == "2")
-            {
-                message = "You won a boat!";
-                //Console.WriteLine(message);
-            }
-            else if (userValue == "3")
-            {
+            if (userValue == "1")               
+                message = "You won a car!";           
+            else if (userValue == "2")           
+                message = "You won a boat!";           
+            else if (userValue == "3")          
                 message = "You won a bike!";
-                //Console.WriteLine(message);
-            }
             else
             {
                 message = "Sorry, we did not understand.";
-                
+                //message = message + "You lose.";
+                message += "You lose.";
+
             }
             Console.WriteLine(message);
             Console.ReadLine();
+            */
+
+            //ternary operators used only if there is one if and else condition.
+            //condition ? first_expression : second_expression; 
+            Console.WriteLine("Anu's big giveaway");
+            Console.WriteLine("Choose a door: 1, 2 or 3");
+            string userValue = Console.ReadLine();
+
+            string message = (userValue == "1") ? "boat" : "a bicycle";
+            Console.Write("You won a ");
+            Console.Write(message);
+            Console.Write(".");
+            Console.ReadLine();
+
 
         }
     }
