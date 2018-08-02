@@ -41,11 +41,16 @@ namespace Decisions
             string userValue = Console.ReadLine();
 
             string message = (userValue == "1") ? "boat" : "a bicycle";
-            Console.Write("You won a ");
-            Console.Write(message);
-            Console.Write(".");
-            Console.ReadLine();
 
+            //Console.Write("You won a ");
+            //Console.Write(message);
+            //Console.Write(".");
+            //Console.ReadLine();
+
+            //string formatting
+            //Console.WriteLine("You won a {0}.", message);
+            Console.WriteLine("You entered number: {0}, therefore you won a {1}.", userValue, message);
+            Console.ReadLine();
 
         }
     }
