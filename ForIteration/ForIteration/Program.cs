@@ -19,6 +19,12 @@ namespace ForIteration
                     break;
                 }
             }
+
+            for (int myValue = 0; myValue < 12; myValue++)
+            {
+                Console.WriteLine(myValue);
+
+            }
             Console.ReadLine();
         }
     }
