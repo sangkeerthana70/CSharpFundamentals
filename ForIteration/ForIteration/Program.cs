@@ -20,6 +20,7 @@ namespace ForIteration
                 }
             }
 
+            //Example of using a code snippet in a for loop and replacing values in a code snippet
             for (int myValue = 0; myValue < 12; myValue++)
             {
                 Console.WriteLine(myValue);
