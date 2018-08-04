@@ -34,6 +34,7 @@ namespace Decisions
             Console.ReadLine();
             */
 
+            /*
             //ternary operators used only if there is one if and else condition.
             //condition ? first_expression : second_expression; 
             Console.WriteLine("Anu's big giveaway");
@@ -51,6 +52,54 @@ namespace Decisions
             //Console.WriteLine("You won a {0}.", message);
             Console.WriteLine("You entered number: {0}, therefore you won a {1}.", userValue, message);
             Console.ReadLine();
+            */
+
+            /*
+            string result = SpeedingIfElse.IssueSpeedTicket(100);
+            Console.WriteLine(result);
+            Console.ReadLine();
+            */
+
+            //TDD Phase
+            int speed;
+            string ticket;
+
+            speed = 0;
+            ticket  = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ",  speed, ticket);
+
+            speed = 50;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+            speed = 60;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+            speed = 61;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+            speed = 79;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+            speed = 80;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+
+            speed = 81;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+            speed = -49;
+            ticket = SpeedingIfElse.IssueSpeedTicket(speed);
+            Console.WriteLine("input = {0} , output = {1} ", speed, ticket);
+
+
+
+
 
         }
     }

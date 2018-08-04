@@ -31,13 +31,13 @@ namespace OperatorsExpressionStatements
             Console.ReadLine();
 
             // Subtraction operator
-            x = 4 - 3;
+            a = 4 - 3;
             
             // Multiplication operator
-            x = 10 * 5;
+            b = 10 * 5;
 
             // Division operator
-            x = 10 / 5;
+            b = 10 / 5;
 
             // Order of operations using parenthesis
             x = (x + y) * (a - b);
