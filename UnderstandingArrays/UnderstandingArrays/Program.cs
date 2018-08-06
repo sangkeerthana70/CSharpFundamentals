@@ -47,10 +47,17 @@ namespace UnderstandingArrays
             Console.ReadLine();
             */
 
-            
+            //reversing a string
+            string zig = "You can get what you want out of life " + " if you help enough other people get what they want.";
 
+            char[] charArray = zig.ToCharArray();//split the char into an array of words with the delimiter
+            Array.Reverse(charArray);
 
-
+            foreach (char zigChar in charArray)
+            {
+                Console.Write(zigChar);
+            }
+            Console.ReadLine();
         }
     }
 }
