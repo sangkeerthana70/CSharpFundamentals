@@ -56,15 +56,40 @@ namespace HelperMethods
             Console.ReadLine();
             */
 
-            Console.Write("Results: ");
-            ReverseString(firstName);
-            ReverseString(lastName);
-            ReverseString(city);
+            //Console.Write("Results: ");
+            //ReverseString(firstName);
+            //ReverseString(lastName);
+            //ReverseString(city);
 
+            //Console.ReadLine();
+
+            //Console.Write("Results: ");
+            //string reversedFirstName = ReverseString(firstName);
+            //string reversedLastName = ReverseString(lastName);
+            //string reversedCity = ReverseString(city);
+
+            //Console.Write(String.Format("{0} {1} {2}",
+            //    reversedFirstName,
+            //    reversedLastName,
+            //    reversedCity));
+
+            //DisplayResult(reversedFirstName, reversedLastName, reversedCity);
+
+            DisplayResult(ReverseString(firstName), ReverseString(lastName), ReverseString(city));
+
+            Console.WriteLine();
+
+            DisplayResult(ReverseString(firstName) + " " +
+                ReverseString(lastName) + " " +
+                ReverseString(city) + " " +
+                ReverseString(city));
+                
             Console.ReadLine();
+
 
         }
 
+        /*
         private static void ReverseString(string message)
         {
             //string message = "Hello World!";
@@ -75,10 +100,38 @@ namespace HelperMethods
             {
                 Console.Write(item);
             }
-            Console.Write(" ");
+            Console.Write(" ");//prints a space after printing each item in the array.
 
         }
+        */
 
+
+
+        
+        //rewrite the above method to return a string value and separate out the functionalities it was doing before
+        private static string ReverseString(string message)
+        {
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+            return String.Concat(messageArray);
+        }
+
+        //move the string formatting in the main method into a separate method
+        private static void DisplayResult(string reverseOfFirstName, string reverseOfLastName, string reverseOfCity)
+        {
+            Console.Write("Results: ");
+            Console.Write(String.Format("{0} {1} {2}",
+                reverseOfFirstName,
+                reverseOfLastName,
+                reverseOfCity));
+        }
+        //method overload
+        private static void DisplayResult(string message)
+        {
+            Console.Write("Results: ");
+            Console.Write(message);
+            
+        }
 
 
     }
