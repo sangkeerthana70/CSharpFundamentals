@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7905D08C-082A-4B32-A3E7-C53E45C419BF}</ProjectGuid>
+    <ProjectGuid>{E17BBE16-19E0-4A00-8EE9-6DD66AC66165}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HelperMethods</RootNamespace>
-    <AssemblyName>HelperMethods</AssemblyName>
+    <RootNamespace>WhileIteration</RootNamespace>
+    <AssemblyName>WhileIteration</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CopyOfProgram.txt" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

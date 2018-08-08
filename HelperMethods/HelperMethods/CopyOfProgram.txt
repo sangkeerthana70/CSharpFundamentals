@@ -11,35 +11,106 @@ namespace HelperMethods
         static void Main(string[] args)
         {
             Console.WriteLine("The Name Game");
-            
+
             Console.Write("What's your first name? ");
             string firstName = Console.ReadLine();
 
             Console.Write("What's your last name? ");
             string lastName = Console.ReadLine();
 
-            Console.Write("In what city were you born? ");
+            Console.Write("In what city were you born?");
             string city = Console.ReadLine();
+            /*
+            char[] firstNameArray = firstName.ToCharArray();
+            Array.Reverse(firstNameArray);
 
-            
+            char[] lastNameArray = lastName.ToCharArray();
+            Array.Reverse(lastNameArray);
+
+            char[] cityArray = city.ToCharArray();
+            Array.Reverse(cityArray);
+
+            string result = "";
+
+            foreach (char item in firstNameArray)
+            {
+                result += item;
+            }
+
+            result += " ";
+
+            foreach (char item in lastNameArray)
+            {
+                result += item;
+            }
+
+            result += " ";
+
+            foreach (char item in cityArray)
+            {
+                result += item;
+            }
+
+            Console.WriteLine("Results: " + result);
+
+            Console.ReadLine();
+            */
+
+            //Console.Write("Results: ");
+            //ReverseString(firstName);
+            //ReverseString(lastName);
+            //ReverseString(city);
+
+            //Console.ReadLine();
+
+            //Console.Write("Results: ");
+            //string reversedFirstName = ReverseString(firstName);
+            //string reversedLastName = ReverseString(lastName);
+            //string reversedCity = ReverseString(city);
+
+            //Console.Write(String.Format("{0} {1} {2}",
+            //    reversedFirstName,
+            //    reversedLastName,
+            //    reversedCity));
+
+            //DisplayResult(reversedFirstName, reversedLastName, reversedCity);
+
 
             //calls the DisPlayResult method overload of the first version and takes in three parameters.
             DisplayResult(ReverseString(firstName), ReverseString(lastName), ReverseString(city));
 
             Console.WriteLine();
 
-            /*
             //calls the DisPlayResult method overload of the second version and takes only one parameter.
             DisplayResult(ReverseString(firstName) + " " +
                 ReverseString(lastName) + " " +
                 ReverseString(city) + " " +
                 ReverseString(city));
-                
+
             Console.ReadLine();
-            */
+
 
         }
-       
+
+        /*
+        private static void ReverseString(string message)
+        {
+            //string message = "Hello World!";
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+
+            foreach (char item in messageArray)
+            {
+                Console.Write(item);
+            }
+            Console.Write(" ");//prints a space after printing each item in the array.
+
+        }
+        */
+
+
+
+
         //rewrite the above method to return a string value and separate out the functionalities it was doing before
         private static string ReverseString(string message)
         {
@@ -56,14 +127,13 @@ namespace HelperMethods
                 reverseOfFirstName,
                 reverseOfLastName,
                 reverseOfCity));
-            Console.Read();
         }
         //method overload creates additional version of the same method with the same name but should take in a different signature(Method signature which is the number of arguments and the data types that a method accepts) 
         private static void DisplayResult(string message)//this overload takes in a single parameter and different in signature from the same version method above
         {
             Console.Write("Results: ");
             Console.Write(message);
-            
+
         }
 
 
