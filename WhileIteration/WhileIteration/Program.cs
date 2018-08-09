@@ -23,8 +23,8 @@ namespace WhileIteration
         {
             Console.Clear();
             Console.WriteLine("Choose an option: ");
-            Console.WriteLine("1) Option 1");
-            Console.WriteLine("2) Option 2");
+            Console.WriteLine("1) Print Numbers");
+            Console.WriteLine("2) Guessing Game");
             Console.WriteLine("3) Exit");
             string result = Console.ReadLine();
 
@@ -67,8 +67,33 @@ namespace WhileIteration
         }
 
         private static void GuessingGame()
-        { 
+        {
+            Console.Clear();
             Console.WriteLine("Guesssing game");
+
+            Random myRandom = new Random();//instantiate C#'s built in Random class 
+            var randomNumber = myRandom.Next(1, 11);
+
+            int guesses = 0;
+            bool incorrect = true;
+
+            do
+            {
+                Console.WriteLine("Guess a number between 1 and 10: ");
+                string result = Console.ReadLine();
+                guesses++;
+
+                if (result == randomNumber.ToString())
+                    incorrect = false;
+                else
+                    Console.WriteLine("Wrong!");
+
+            } while (incorrect);
+            Console.WriteLine("Correct! It took you {0} guesses." , guesses); 
+             
+
+                
+
             Console.ReadLine();
         }
     }
