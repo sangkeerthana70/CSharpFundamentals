@@ -10,11 +10,16 @@ namespace WhileIteration
     {
         static void Main(string[] args)
         {
-            MainMenu();
+            bool displayMenu = true;
+            while (displayMenu == true)
+            {
+                displayMenu = MainMenu();
+            }
+           
         }
 
 
-        public static void MainMenu()
+        public static bool MainMenu()
         {
             Console.WriteLine("Choose an option: ");
             Console.WriteLine("1) Option 1");
@@ -24,21 +29,21 @@ namespace WhileIteration
 
             if (result == "1")
             {
-
+                PrintNumbers();
+                return true;
             }
             else if(result == "2")
             {
-
-
-
+                GuessingGame();
+                return true;
             }
             else if(result == "3")
             {
-
+                return false;//exit method
             }
             else
             {
-
+                return true;//any other option entered will prompt the while loop again
             }
 
         }
