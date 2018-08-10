@@ -11,6 +11,9 @@ namespace WhileIteration
         static void Main(string[] args)
         {
             bool displayMenu = true;
+            //A while Iteration is used instead of for because you want to continue iterating through a block of code 
+            //until a given condition is no longer true
+
             while (displayMenu)
             {
                 displayMenu = MainMenu();
@@ -76,6 +79,8 @@ namespace WhileIteration
 
             int guesses = 0;
             bool incorrect = true;
+
+            //A Do while is used when need to execute the block of code at least once
 
             do
             {
