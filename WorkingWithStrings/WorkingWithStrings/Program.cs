@@ -31,12 +31,13 @@ namespace WorkingWithStrings
             Console.WriteLine(myString2);
             Console.ReadLine();
 
+            //sets place value for a given set of numbers
             string myString3 = string.Format("{0:N}", 12334567890);
             Console.WriteLine(myString3);
             Console.ReadLine();
             */
-            
 
+            /*
             //represent a value as a percent
             string myString4 = string.Format("Percentage: {0:P}", .123);
             Console.WriteLine(myString4);
@@ -48,14 +49,56 @@ namespace WorkingWithStrings
             Console.ReadLine();
             Console.Read();
 
-            string myString6 = " That summer we took threes across the board ";
-            myString6 = myString6.Substring(6, 14);
+            string myStringA = "  That summer we took threes across the board ";
+            string myString6 = myStringA.Substring(6, 14);
             Console.WriteLine(myString6);
             Console.ReadLine();
             Console.Read();
 
+            string myString7 = myStringA.ToUpper();
+            Console.WriteLine(myString7);
+            Console.ReadLine();
+            Console.Read();
+
+            string myString8 = myStringA.Replace(" ", "--");
+            Console.WriteLine(myString8);
+            Console.ReadLine();
+            Console.Read();
+
+            string myString9 = myStringA.Remove(6, 14);
+            Console.WriteLine(myString9);
+            Console.ReadLine();
+            Console.Read();
+
+            myStringA = String.Format("Length before: {0} -- Length after {1}", myStringA.Length, myStringA.Trim().Length);
+            Console.WriteLine(myStringA);
+            Console.ReadLine();
+            Console.Read();
+            */
+
+            /*
+            string newString = "";
+            for (int i = 0; i < 100; i++)
+            {
+                newString += "--" + i.ToString();
 
 
+            }
+            Console.WriteLine(newString);
+            Console.ReadLine();
+            Console.Read();
+            */
+
+            //building string using the StringBuilder class that is an inbuilt class of String
+            StringBuilder myString = new StringBuilder();
+            for (int i = 0; i < 100; i++)
+            {
+                myString.Append("--");
+                myString.Append(i);
+            }
+            Console.WriteLine(myString);
+            Console.ReadLine();
+            Console.Read();
 
 
         }
