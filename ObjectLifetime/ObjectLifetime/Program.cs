@@ -19,14 +19,24 @@ namespace ObjectLifetime
             Car myOtherCar;
             myOtherCar = myCar;//myOtherCar is a variable that refers to the same memory address as myCar.
 
-            Console.WriteLine("variable myOtherCar points to same memory as myCar: {0} {1} {2} {3}",
+            Console.WriteLine("Variable myOtherCar points to same memory as myCar: {0} {1} {2} {3}",
                 myOtherCar.Make,
                 myOtherCar.Model,
                 myOtherCar.Year,
                 myOtherCar.Color);
 
+            myOtherCar.Model = "98";//changing myCar.Model("Cutlas Supreme" to myOtherCar.Model ("98")
+            Console.WriteLine();
+            Console.WriteLine("Checking to see myOtherCar and myCar hold " +
+                "same variable as they point to same memory:" + " " +
+                "{0} {1} {2} {3}",
+                myCar.Make,
+                myCar.Model,
+                myCar.Year,
+                myCar.Color);
+
             Console.ReadLine();
-        }
+        }//this block ends the references to the two objects by releasing the memory
     }
 
     class Car
