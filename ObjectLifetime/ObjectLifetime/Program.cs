@@ -34,9 +34,21 @@ namespace ObjectLifetime
                 myCar.Model,
                 myCar.Year,
                 myCar.Color);
+            //setting myOtherCar object reference to null
+            myOtherCar = null;//null is not zero or empty but indeterminate 
+            /*
+            Console.WriteLine("Variable myOtherCar points to same memory as myCar: {0} {1} {2} {3}",
+                myOtherCar.Make,
+                myOtherCar.Model,
+                myOtherCar.Year,
+                myOtherCar.Color);
+            //null reference exception unhandled will be thrown
+            */
 
+            //setting myCar object also as null and this removes all references to memory
+            myCar = null;
             Console.ReadLine();
-        }//this block ends the references to the two objects by releasing the memory
+        }//this block ends the references to the two objects by releasing them from  memory or in other words the object goes out of scope after this block
     }
 
     class Car
