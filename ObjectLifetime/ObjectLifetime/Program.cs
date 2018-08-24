@@ -11,10 +11,20 @@ namespace ObjectLifetime
         static void Main(string[] args)
         {
             Car myCar = new Car();
+            /*
             myCar.Make = "OldsMobile";
             myCar.Model = "Cutlas Supreme";
             myCar.Year = 1986;
             myCar.Color = "Silver";
+            */
+
+            Car myThirdCar = new Car("Ford", "Escape", 2005, "White");
+            Console.WriteLine("My third Card has these features: {0} {1} {2} {3}",
+                myThirdCar.Make,
+                myThirdCar.Model,
+                myThirdCar.Year,
+                myThirdCar.Color);
+            Console.WriteLine();
 
             Car myOtherCar;
             myOtherCar = myCar;//myOtherCar is a variable that refers to the same memory address as myCar.
@@ -48,6 +58,7 @@ namespace ObjectLifetime
             //setting myCar object also as null and this removes all references to memory
             myCar = null;
             Console.ReadLine();
+            
         }//this block ends the references to the two objects by releasing them from  memory or in other words the object goes out of scope after this block
     }
 
@@ -57,5 +68,23 @@ namespace ObjectLifetime
         public string Model { get; set; }
         public int Year { get; set; }
         public string Color { get; set; }
+
+        //constructors
+        public Car()
+        {
+            //we could load values into various properties of the class 
+            // from a config file, database or some other source to get them 
+            //into a valid state to be used as soon as it is instantiated.
+            this.Make = "Nissan";
+        }
+
+        //overloaded constructors
+        public Car(string make, string model, int year, string color)
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+            this.Color = color;
+        }
     }
 }
