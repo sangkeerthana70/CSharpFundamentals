@@ -28,6 +28,7 @@ namespace ObjectLifetime
                 myThirdCar.Color);
             Console.WriteLine();
 
+            /*
             Car myOtherCar;
             myOtherCar = myCar;//myOtherCar is a variable that refers to the same memory address as myCar.
 
@@ -55,10 +56,11 @@ namespace ObjectLifetime
                 myOtherCar.Year,
                 myOtherCar.Color);
             //null reference exception unhandled will be thrown
-            */
+          
 
             //setting myCar object also as null and this removes all references to memory
             myCar = null;
+            */
             Console.ReadLine();
             
         }//this block ends the references to the two objects by releasing them from  memory or in other words the object goes out of scope after this block
@@ -93,6 +95,7 @@ namespace ObjectLifetime
         public static void MyMethod()
         {
             Console.WriteLine("Calling the static MyMethod()");
+            Console.WriteLine(Car.Make);
         }
     }
 }
