@@ -56,6 +56,8 @@ namespace AssembliesAndNamespaces
             Console.WriteLine("Using System and System.IO classes from the same namespaces");
             Console.ReadLine();
 
+
+            //Download a  html file into a txt file using System.Net namespace
             WebClient Client = new WebClient();
             string reply = Client.DownloadString("https://msdn.microsoft.com");
 
