@@ -72,6 +72,28 @@ namespace WorkingWIthLists
             Console.WriteLine("Capacity: {0}", dinosaurs.Capacity);//capacity changes as the elements in the list are added or removed
             Console.WriteLine("Count: {0}", dinosaurs.Count);
 
+
+            //CopyTo method Copies the entire List<T> to a compatible one-dimensional array, 
+            //starting at the specified index of the target array.
+            
+
+            
+
+            // Declare an array with 15 elements.
+            string[] array = new string[15];
+
+            dinosaurs.CopyTo(array);
+            dinosaurs.CopyTo(array, 6);
+            dinosaurs.CopyTo(2, array, 12, 3);
+
+            Console.WriteLine("\nCopied Contents of the array:");
+            foreach (string dinosaur in array)
+            {
+                Console.WriteLine(dinosaur);
+            }
+
+
+
             //The Clear method is used at the end of the program, to remove all items from the list, 
             //and the Capacity and Count properties are then displayed.
             dinosaurs.Clear();
