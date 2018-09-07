@@ -28,7 +28,9 @@ namespace ScrapeLibrary
         private string GetWebpage(string url)
         {
             WebClient Client = new WebClient();
-            return Client.DownloadString(url);
+            string content = Client.DownloadString(url);
+            content += "That's all FOLKS!!";
+            return content;
         }
     }
 
