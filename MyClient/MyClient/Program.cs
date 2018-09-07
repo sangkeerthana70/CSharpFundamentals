@@ -12,6 +12,9 @@ namespace MyClient
         static void Main(string[] args)
         {
             Scrape myScrape = new Scrape();
+            string value = myScrape.ScrapeWebPage("http://msdn.microsoft.com");
+            Console.WriteLine(value);
+            Console.ReadLine();
 
         }
     }
